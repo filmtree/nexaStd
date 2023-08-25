@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="TextArea" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Div id="Div00" taborder="0" text="Div00" left="49" top="73" width="374" height="189" border="1px solid #cccccc" background="#FFFFFF">
+          <Layouts>
+            <Layout>
+              <TextArea id="TextArea00" taborder="0" left="88" top="40" width="202" height="112" onkeydown="Div00_TextArea00_onkeydown"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Static id="Static00" taborder="1" text="늘어나는 Textarea" left="49" top="40" width="120" height="14"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Div00_TextArea00_onkeydown = function(obj:nexacro.TextArea,e:nexacro.KeyEventInfo)
+{
+	//TextArea height 조절
+	var tarea_height = 150;	//기본 높이
+	
+	obj.set_height(tarea_height);
+	obj.set_height(obj.height + obj.vscrollbar.max + 20);
+	
+	//상위 DIV height 조절
+	this.Div00.form.resetScroll(); //스크롤 리셋
+	var dev_height = 300; //기본 높이
+	
+	this.Div00.set_height(dev_height);
+	this.Div00.set_height(this.Div00.height + this.Div00.form.vscrollbar.max + 20);
+};
+]]></Script>
+  </Form>
+</FDL>
