@@ -66,6 +66,28 @@
           </Formats>
         </Grid>
         <Grid id="Grid01" taborder="2" left="541" top="240" width="459" height="179" nodatatext="데이터가 없습니다."/>
+        <Grid id="Grid02" taborder="3" left="571" top="465" width="169" height="143" binddataset="Checkbox" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="77"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Checkbox"/>
+                <Cell col="1" text="Column0"/>
+              </Band>
+              <Band id="body">
+                <Cell displaytype="checkboxcontrol" edittype="checkbox" expr="expr:Column0=='Y'?'1':'0'" text="bind:Column0" suppressalign="middle"/>
+                <Cell col="1" text="bind:Column0"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
       </Layout>
     </Layouts>
     <Objects>
@@ -136,6 +158,25 @@
           </Row>
         </Rows>
       </Dataset>
+      <Dataset id="Checkbox" oncolumnchanged="Checkbox_oncolumnchanged">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">Y</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">N</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">N</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">Y</Col>
+          </Row>
+        </Rows>
+      </Dataset>
     </Objects>
     <Script type="xscript5.1"><![CDATA[
 this.Dataset00_onload = function(obj:nexacro.NormalDataset,e:nexacro.DSLoadEventInfo)
@@ -143,6 +184,23 @@ this.Dataset00_onload = function(obj:nexacro.NormalDataset,e:nexacro.DSLoadEvent
 	var nH = this.Grid00.getRealRowFullSize();
      //computed style (border-top + border-bottom = 3)
      this.Grid00.set_height(nH + 3);
+};
+
+
+this.Checkbox_oncolumnchanged = function(obj:nexacro.NormalDataset,e:nexacro.DSColChangeEventInfo)
+{
+	if(e.columnid == "Column0")
+    {
+        obj.set_enableevent(false);
+        if(e.newvalue == '1')
+        {
+            obj.setColumn(e.row,"Column0",'Y');
+        } else if(e.newvalue == '0')
+        {            
+            obj.setColumn(e.row,"Column0",'N');  
+        }
+        obj.set_enableevent(true);
+    }
 };
 ]]></Script>
   </Form>

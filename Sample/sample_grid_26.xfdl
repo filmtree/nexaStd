@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_26" left="0" top="0" width="1024" height="768" titletext="New Form">
     <Layouts>
       <Layout height="768" width="1024">
@@ -27,8 +27,8 @@
               <Band id="body">
                 <Cell text="bind:Name" textAlign="left" suppress="0" border=""/>
                 <Cell col="1" text="bind:Address" textAlign="left" wordWrap="char" border=""/>
-                <Cell col="2" text="bind:Company" textAlign="left" suppress="0" border=""/>
-                <Cell col="3" text="bind:Department" textAlign="left" wordWrap="english" suppress="0" border=""/>
+                <Cell col="2" text="bind:Company" textAlign="left" suppress="1" border=""/>
+                <Cell col="3" text="bind:Department" textAlign="left" wordWrap="english" suppress="1" border=""/>
                 <Cell col="4" text="bind:Salary" displaytype="currency" textAlign="right" border=""/>
               </Band>
             </Format>
