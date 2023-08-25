@@ -1,8 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <FDL version="2.1">
-  <Form id="Layout_ex" width="1280" height="720" titletext="New Form" onload="Layout_ex_onload">
+  <Form id="Layout_ex" width="800" height="600" titletext="New Form" onload="Layout_ex_onload">
     <Layouts>
-      <Layout height="720" width="1280"/>
+      <Layout height="600" width="800" type="vertical">
+        <Static id="Static00" taborder="0" text="Layout Type : Vertical" left="286" top="87" width="117" height="60"/>
+        <Div id="Div00" taborder="1" text="Div00" left="280" top="30" width="150" height="150" border="1px solid #dadada" background="#FFFFFF" semantictag="header" formscrollbartrackbarsize="20">
+          <Layouts>
+            <Layout>
+              <Button id="Button00" taborder="0" text="Button00" left="10" top="10" width="120" height="50"/>
+              <Button id="Button00_00" taborder="1" text="Button00" left="10" top="165" width="120" height="50"/>
+              <Button id="Button00_00_00" taborder="2" text="Button00" left="10" top="295" width="120" height="50"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="Div01" taborder="2" text="Div01" left="280" top="205" width="150" height="150" border="1px solid #dadada" background="#FFFFFF" semantictag="section"/>
+        <Div id="Div02" taborder="3" text="Div02" left="280" top="380" width="150" height="150" border="1px solid #dadada" background="#FFFFFF" semantictag="footer"/>
+      </Layout>
     </Layouts>
     <Script type="xscript5.1"><![CDATA[]]></Script>
   </Form>

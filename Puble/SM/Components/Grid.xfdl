@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <FDL version="2.1">
-  <Form id="Grid" width="1280" height="720" titletext="New Form">
+  <Form id="Grid" width="1280" height="1000" titletext="New Form">
     <Layouts>
-      <Layout height="720" mobileorientation="landscape" width="1280">
-        <Grid id="Grid00" taborder="0" left="41" top="29" width="459" height="231" binddataset="Dataset00" autofittype="col" formatid="default" fillareatype="none" useselcolor="true" cellmovingtype="none" cellsizingtype="row" extendsizetype="row" minheight="" mouseovertype="default">
+      <Layout height="1000" mobileorientation="landscape" width="1280" type="default">
+        <Grid id="Grid00" taborder="0" left="41" top="55" width="459" height="231" binddataset="Dataset00" autofittype="col" formatid="default" fillareatype="none" useselcolor="true" cellmovingtype="none" cellsizingtype="row" extendsizetype="row" minheight="" mouseovertype="default">
           <Formats>
             <Format id="default">
               <Columns>
@@ -34,7 +34,7 @@
             </Format>
           </Formats>
         </Grid>
-        <Grid id="Grid00_00" taborder="1" left="541" top="29" width="459" height="141" binddataset="Dataset00" autofittype="col" formatid="default" fillareatype="none" useselcolor="true" cellmovingtype="none" cellsizingtype="none" extendsizetype="none" fastvscrolltype="centerdisplay" maxheight="200" minheight="">
+        <Grid id="Grid00_00" taborder="1" left="541" top="50" width="459" height="141" binddataset="Dataset00" autofittype="col" formatid="default" fillareatype="none" useselcolor="true" cellmovingtype="none" cellsizingtype="none" extendsizetype="none" fastvscrolltype="centerdisplay" maxheight="200" minheight="">
           <Formats>
             <Format id="default">
               <Columns>
@@ -45,7 +45,7 @@
                 <Column size="80"/>
               </Columns>
               <Rows>
-                <Row band="head" size="24"/>
+                <Row size="24" band="head"/>
                 <Row size="24"/>
               </Rows>
               <Band id="head">
@@ -60,13 +60,13 @@
                 <Cell col="1" text="bind:Address"/>
                 <Cell col="2" text="bind:Company"/>
                 <Cell col="3" text="bind:Department"/>
-                <Cell col="4" text="bind:Salary"/>
+                <Cell col="4" text="bind:Salary" edittype="normal"/>
               </Band>
             </Format>
           </Formats>
         </Grid>
-        <Grid id="Grid01" taborder="2" left="541" top="240" width="459" height="179" nodatatext="데이터가 없습니다."/>
-        <Grid id="Grid02" taborder="3" left="571" top="465" width="169" height="143" binddataset="Checkbox" autofittype="col">
+        <Grid id="Grid01" taborder="4" left="541" top="240" width="469" height="179" nodatatext="데이터가 없습니다."/>
+        <Grid id="Grid02" taborder="5" left="541" top="476" width="169" height="143" binddataset="Checkbox" autofittype="col" cellclickbound="cell">
           <Formats>
             <Format id="default">
               <Columns>
@@ -84,6 +84,91 @@
               <Band id="body">
                 <Cell displaytype="checkboxcontrol" edittype="checkbox" expr="expr:Column0=='Y'?'1':'0'" text="bind:Column0" suppressalign="middle"/>
                 <Cell col="1" text="bind:Column0"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid03" taborder="3" left="39" top="335" width="461" height="251" binddataset="Dataset00" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="48"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="No"/>
+                <Cell col="1" text="Name"/>
+                <Cell col="2" text="Address"/>
+                <Cell col="3" text="Company"/>
+                <Cell col="4" text="Department"/>
+                <Cell col="5" text="Salary"/>
+              </Band>
+              <Band id="body">
+                <Cell expr="currow+1"/>
+                <Cell col="1" text="bind:Name"/>
+                <Cell col="2" text="bind:Address"/>
+                <Cell col="3" text="bind:Company"/>
+                <Cell col="4" text="bind:Department"/>
+                <Cell col="5" text="bind:Salary"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static00" taborder="2" text="Number 넣기" left="41" top="310" width="120" height="14" onclick="Static00_onclick"/>
+        <Static id="Static01" taborder="6" text="Border Move" left="44" top="23" width="142" height="24"/>
+        <Grid id="Grid04" taborder="7" left="39" top="640" width="461" height="125" binddataset="Url" autofittype="col" oncellclick="Grid04_oncellclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="153"/>
+                <Column size="258"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="site"/>
+                <Cell col="1" text="url"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:site"/>
+                <Cell col="1" text="bind:url" expr="expr:bLink=='Y'?&quot;&lt;u v='true'&gt;&quot; + url + &quot;&lt;/u&gt;&quot;:url" displaytype="decoratetext"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static02" taborder="8" text="Cell Link" left="41" top="605" width="103" height="28"/>
+        <Static id="Static02_00" taborder="9" text="Checkbox Text and CellClickBound" left="541" top="443" width="188" height="28" onclick="Static02_00_onclick"/>
+        <Grid id="Grid05" taborder="10" left="760" top="476" width="250" height="137" binddataset="Dataset01" autofittype="col" oncellclick="Grid05_oncellclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Column0"/>
+                <Cell col="1" text="Column1"/>
+                <Cell col="2" text="Column2"/>
+              </Band>
+              <Band id="body">
+                <Cell text="expr:Column0==1?&quot;theme://images/rdo_WF_Radio_S.png&quot;:&quot;theme://images/rdo_WF_Radio_O.png&quot;" displaytype="imagecontrol"/>
+                <Cell col="1" text="bind:Column1"/>
+                <Cell col="2" text="bind:Column2"/>
               </Band>
             </Format>
           </Formats>
@@ -177,6 +262,64 @@
           </Row>
         </Rows>
       </Dataset>
+      <Dataset id="Url">
+        <ColumnInfo>
+          <Column id="site" type="STRING" size="256"/>
+          <Column id="url" type="STRING" size="256"/>
+          <Column id="bLink" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="url">http://codeschool.com</Col>
+            <Col id="site">codeschool</Col>
+            <Col id="bLink">Y</Col>
+          </Row>
+          <Row>
+            <Col id="url">https://www.codecademy.com</Col>
+            <Col id="site">codecademy</Col>
+            <Col id="bLink">Y</Col>
+          </Row>
+          <Row>
+            <Col id="url">-</Col>
+            <Col id="site">khanacademy</Col>
+            <Col id="bLink">N</Col>
+          </Row>
+          <Row>
+            <Col id="url">https://www.udacity.com</Col>
+            <Col id="site">udacity</Col>
+            <Col id="bLink">Y</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset01">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">A</Col>
+            <Col id="Column2">1</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">0</Col>
+            <Col id="Column1">B</Col>
+            <Col id="Column2">2</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">0</Col>
+            <Col id="Column1">C</Col>
+            <Col id="Column2">3</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">0</Col>
+            <Col id="Column1">D</Col>
+            <Col id="Column2">4</Col>
+          </Row>
+        </Rows>
+      </Dataset>
     </Objects>
     <Script type="xscript5.1"><![CDATA[
 this.Dataset00_onload = function(obj:nexacro.NormalDataset,e:nexacro.DSLoadEventInfo)
@@ -201,6 +344,34 @@ this.Checkbox_oncolumnchanged = function(obj:nexacro.NormalDataset,e:nexacro.DSC
         }
         obj.set_enableevent(true);
     }
+};
+
+
+this.Grid04_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	if(e.cell == 1) {
+		if( this.Url.getColumn(e.row, "bLink") == "Y")        
+            system.execBrowser(this.Url.getColumn(e.row, 1));
+	}
+};
+
+
+this.Grid05_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	if (e.cell == 0)
+	{
+		this.Dataset01.set_enableevent(false);
+		for(var i=0; i<this.Dataset01.rowcount; i++)
+		{
+			if (e.row == i)
+			{
+				this.Dataset01.setColumn(e.row,"Column0","1");
+			}else{
+				this.Dataset01.setColumn(i,"Column0","0");
+			}	
+		}
+		this.Dataset01.set_enableevent(true);
+	}
 };
 ]]></Script>
   </Form>
