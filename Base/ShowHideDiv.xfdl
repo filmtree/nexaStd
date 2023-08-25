@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="ShowHideDiv" width="1280" height="720" titletext="New Form" onload="ShowHideDiv_onload">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <Static id="Static00" taborder="0" text="ShowHideDiv" left="67" top="53" width="145" height="60" onmouseenter="Static00_onmouseenter" onmouseleave="Static00_onmouseleave" font="24px/normal &quot;Malgun Gothic&quot;"/>
+        <Div id="Div00" taborder="1" text="Div00" left="60" top="110" width="200" height="0" border="1px solid #cccccc" background="#ffffff"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.ShowHideDiv_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	var aniObj00 = new nexacro.Animation("Ani00", this);
+	this.addChild("Ani00", aniObj00);
+	this.Ani00.addTarget("AniItem00", this.Div00, "height: 200");
+/*	this.Ani00.setEventHandler("oncomplete", this.Ani00_oncomplete, this)*/// 애니메이션이 끝난 후 액션
+	this.Ani00.set_easing("easeInSine");
+	this.Ani00.set_duration(250);
+	
+	var aniObj01 = new nexacro.Animation("Ani01", this);
+	this.addChild("Ani01", aniObj01);
+	this.Ani01.addTarget("AniItem00", this.Div00, "height: 0");
+/*	this.Ani01.setEventHandler("oncomplete", this.Ani01_oncomplete, this)*/// 애니메이션이 끝난 후 액션
+	this.Ani01.set_easing("easeInSine");
+	this.Ani01.set_duration(250);
+};
+
+
+this.Static00_onmouseenter = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	this.Ani00.play();
+};
+
+this.Static00_onmouseleave = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	this.Ani01.play();
+};
+
+// 애니메이션이 끝난 후 액션, 클릭등의 이벤트에서 조건부 설정시.
+// this.Ani00_oncomplete = function(obj:nexacro.Animation,e:nexacro.AnimationEventInfo)
+// {  
+//   this.Div00.set_height(200);
+// };
+// 
+// this.Ani01_oncomplete = function(obj:nexacro.Animation,e:nexacro.AnimationEventInfo)
+// {  
+//   this.Div00.set_height(0);
+// };
+
+]]></Script>
+  </Form>
+</FDL>
