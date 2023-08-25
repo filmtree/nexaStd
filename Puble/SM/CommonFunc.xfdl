@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="CommonFunc" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <Button id="Button00" taborder="0" text="Button00" left="66" top="60" width="120" height="50" onclick="Button_onclick" cssclass="testBtn"/>
+        <Button id="Button01" taborder="1" text="Button01" left="240" top="61" width="120" height="50" onclick="Button_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.Button_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    this.alert(e.fromobject.id);
+};]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="FileDialog" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <Button id="Button00" taborder="0" text="Single" left="175" top="110" width="120" height="50" onclick="Button00_onclick"/>
+        <Button id="Button01" taborder="1" text="Multi" left="420" top="110" width="120" height="50" onclick="Button01_onclick"/>
+        <TextArea id="TextArea00" taborder="2" left="185" top="204" width="355" height="177"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <FileDialog id="FileDialog00" onclose="FileDialog00_onclose"/>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.FileDialog00.open("", FileDialog.LOAD)
+};
+
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.FileDialog00.open("", FileDialog.MULTILOAD)
+};
+
+
+this.FileDialog00_onclose = function(obj:nexacro.FileDialog,e:nexacro.FileDialogEventInfo)
+{
+    this.TextArea00.set_value("selectfiles: "+e.virtualfiles.length+"\n");
+    for (var i = 0, len = e.virtualfiles.length, vFile; i < len; i++)
+    {
+        vFile = e.virtualfiles[i];
+        vFile.addEventHandler("onsuccess", this.FileDialog_VirtualFile_onsuccess, this);
+        
+        vFile.open(null, VirtualFile.openRead);
+    }
+    
+};
+
+this.FileDialog_VirtualFile_onsuccess = function(obj:nexacro.VirtualFile, e:nexacro.VirtualFileEventInfo)
+{
+    switch (e.reason)
+    {
+        case 1:
+            obj.getFileSize();
+            break;
+        case 9:
+            this.TextArea00.set_value(this.TextArea00.value+obj.filename+"("+e.filesize+")\n");
+            obj.close();
+            break;
+    }
+}]]></Script>
+  </Form>
+</FDL>

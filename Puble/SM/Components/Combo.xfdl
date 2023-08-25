@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Combo" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Combo id="Combo00" taborder="0" text="사과" left="17" top="63" width="275" height="47" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" index="0" value="0">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">0</Col>
+                <Col id="datacolumn">사과</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">복숭아</Col>
+                <Col id="codecolumn">1</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">수박</Col>
+                <Col id="codecolumn">2</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">포도</Col>
+                <Col id="codecolumn">3</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Combo id="Combo01" taborder="1" text="사과" left="17" top="185" width="275" height="50" codecolumn="CODE" datacolumn="DATA" index="0" innerdataset="Dataset00" value="00"/>
+        <Static id="Static00" taborder="2" text="고정 컴포넌트" left="17" top="23" width="149" height="41"/>
+        <Static id="Static00_00" taborder="3" text="동적 컴포넌트" left="17" top="144" width="149" height="41"/>
+        <Combo id="Combo02" taborder="4" text="사과" left="17" top="330" width="163" height="50" innerdataset="Dataset00" codecolumn="CODE" datacolumn="DATA" index="0" value="00" onitemchanged="Combo02_onitemchanged"/>
+        <Grid id="Grid00" taborder="5" left="216" top="333" width="84" height="199" binddataset="Dataset01">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="CODE"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:CODE"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid01" taborder="6" left="326" top="333" width="88" height="199" binddataset="Dataset01">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="CODE"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:CODE" displaytype="combotext" combodataset="Dataset00" combocodecol="CODE" combodatacol="DATA"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Combo id="Combo03" taborder="7" text="사과" left="600" top="114" width="269" height="46" type="dropdown" innerdataset="Dataset00" codecolumn="CODE" datacolumn="DATA" index="0" value="00"/>
+        <Radio id="Radio00" taborder="8" left="602" top="67" width="417" height="40" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" direction="vertical" index="0" text="DROPDOWN" value="00" onitemchanged="Radio00_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">00</Col>
+                <Col id="datacolumn">DROPDOWN</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">01</Col>
+                <Col id="datacolumn">SEARCH</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">02</Col>
+                <Col id="datacolumn">FILTER</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">03</Col>
+                <Col id="datacolumn">FILTERLIKE</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Combo id="Combo04" taborder="9" text="Combo04" left="600" top="262" width="217" height="43" visible="true" innerdataset="Multi" codecolumn="CODE" datacolumn="DATA" ondropdown="Combo04_ondropdown"/>
+        <Grid id="Grid02" taborder="10" left="600" top="307" width="260" height="113" binddataset="Multi" visible="false" oncellclick="Grid02_oncellclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24"/>
+              </Rows>
+              <Band id="body">
+                <Cell text="bind:check" displaytype="checkboxcontrol" edittype="checkbox"/>
+                <Cell col="1" text="bind:CODE"/>
+                <Cell col="2" text="bind:DATA"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="DATA" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">00</Col>
+            <Col id="DATA">사과</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="DATA">포도</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="DATA">바나나</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="DATA">수박</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="DATA">복숭아</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="DATA">딸기</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset01">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">00</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">01</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Multi">
+        <ColumnInfo>
+          <Column id="check" type="STRING" size="256"/>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="DATA" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="DATA">CODE01</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="DATA">CODE02</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="DATA">CODE03</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="DATA">CODE04</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item1" compid="Combo02" propid="value" datasetid="Dataset00" columnid="CODE"/>
+    </Bind>
+    <Script type="xscript5.1"><![CDATA[
+this.Combo02_onitemchanged = function(obj:nexacro.Combo,e:nexacro.ItemChangeEventInfo)
+{
+	
+};
+
+this.Radio00_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	switch(e.postindex) {
+	case 0:
+		this.Combo03.set_type("dropdown");
+		break;
+	case 1:
+		this.Combo03.set_type("search");
+		break;
+	case 2:
+		this.Combo03.set_type("filter");
+		break;
+	case 3:
+		this.Combo03.set_type("filterlike");
+		break;
+	default:
+		trace("UNKNOWN TYPE");
+	}
+};
+
+this.Combo04_ondropdown = function(obj:nexacro.Combo,e:nexacro.EventInfo)
+{
+	this.Grid02.set_visible(true);
+	return false;
+};
+
+this.Grid02_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	this.Grid02.set_visible(false);
+	this.Combo04.set_value(this.Multi.getColumn(e.row, "CODE"));
+};
+]]></Script>
+  </Form>
+</FDL>

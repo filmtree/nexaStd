@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Checkbox" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <CheckBox id="CheckBox00" taborder="0" text="CheckBox00" left="29" top="40" width="150" height="20"/>
+        <CheckBox id="CheckBox00_00" taborder="1" text="CheckBox00" left="179" top="40" width="150" height="20"/>
+        <CheckBox id="CheckBox00_01" taborder="2" text="CheckBox00" left="329" top="40" width="150" height="20"/>
+        <CheckBox id="CheckBox00_02" taborder="3" text="CheckBox00" left="479" top="40" width="150" height="20"/>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>

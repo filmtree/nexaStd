@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XCSS version="1.1">
+  <Predefines/>
+  <CSSData><![CDATA[.Button.testBtn
+{
+	background : #f7f4ce !important;
+	
+}
+.ImageViewer
+{
+	-nexa-border : 0px none;
+	background : none;
+}
+.Button.tg
+{
+	-nexa-icon : url('theme://images/chk_WF_Box_O.png');
+	-nexa-text-padding : 0px 0px 0px 10px;
+
+}
+.Button.tg[userstatus=selected]
+{
+	-nexa-icon : url('theme://images/chk_WF_Box_F.png');
+	-nexa-text-padding : 0px 0px 0px 10px;
+}
+.Button.tg2
+{-nexa-icon : url('theme://images/chk_WF_Box_O.png');
+	-nexa-text-padding : 0px 0px 0px 10px;
+}
+.Button.tg2[userstatus=selected]
+{-nexa-icon : url('theme://images/chk_WF_Box_F.png');
+	-nexa-text-padding : 0px 0px 0px 10px;
+}
+]]></CSSData>
+</XCSS>

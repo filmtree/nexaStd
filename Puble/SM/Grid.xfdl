@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Grid01" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <Grid id="Grid01" taborder="1" left="583" top="40" width="187" height="304" binddataset="Dataset01" extendsizetype="row" treeinitstatus="expand,all" treeusecheckbox="false" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24"/>
+              </Rows>
+              <Band id="body">
+                <Cell text="bind:Column1" displaytype="treeitemcontrol" edittype="tree" treelevel="bind:Column0"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="그리드1" taborder="0" left="45" top="40" width="485" height="241" binddataset="Dataset00" autofittype="col" cellsizingtype="row" extendsizetype="row" autosizingtype="both">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80" band="left"/>
+                <Column size="80"/>
+                <Column size="83"/>
+                <Column size="80" band="right"/>
+              </Columns>
+              <Rows>
+                <Row size="54" band="head"/>
+                <Row size="30"/>
+                <Row size="24" band="summ"/>
+                <Row size="24" band="summ"/>
+                <Row size="24" band="summ"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Column0&#13;&#10;test"/>
+                <Cell col="1" text="Column1"/>
+                <Cell col="2"/>
+                <Cell col="3" text="Column2"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0"/>
+                <Cell col="1" text="bind:Column1" displaytype="buttoncontrol" edittype="button"/>
+                <Cell col="2" cssclass="other" displaytype="buttoncontrol"/>
+                <Cell col="3" text="bind:Column2"/>
+              </Band>
+              <Band id="summary">
+                <Cell/>
+                <Cell col="1"/>
+                <Cell col="2"/>
+                <Cell col="3"/>
+                <Cell row="1"/>
+                <Cell row="1" col="1"/>
+                <Cell row="1" col="2"/>
+                <Cell row="1" col="3"/>
+                <Cell row="2"/>
+                <Cell row="2" col="1"/>
+                <Cell row="2" col="2"/>
+                <Cell row="2" col="3"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00" onload="Dataset00_onload">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">one</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+            <Col id="Column1">two</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">3</Col>
+            <Col id="Column1">three</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">4</Col>
+            <Col id="Column1">four</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">5</Col>
+            <Col id="Column1">five</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset01" onload="Dataset01_onload">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">0</Col>
+            <Col id="Column1">A</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">A-1</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+            <Col id="Column1">A-1-1</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+            <Col id="Column1">A-1-2</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">A-2</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+            <Col id="Column1">A-2-1</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">0</Col>
+            <Col id="Column1">B</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">B-1</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[// 
+// this.Dataset01_onload = function(obj:nexacro.NormalDataset,e:nexacro.DSLoadEventInfo)
+// {
+// 	var tempColValue;
+//     
+//     for(var i=0; i < this.Grid01.rowcount; i++)
+//     {
+//         tempColValue = this.Dataset00.getColumn(this.Grid01.getDatasetRow(i), "Column0");
+//         
+//         if(tempColValue==0) {
+//             this.Grid01.setRealRowSize(i,"60");
+//         }
+//         else if(tempColValue==1) {
+//             this.Grid01.setRealRowSize(i,"40");
+//         }
+//         else if(tempColValue==2) {
+//             this.Grid01.setRealRowSize(i,"20");
+//         }
+//     }
+// };
+// 
+//  this.Dataset00_onload = function(obj:nexacro.NormalDataset,e:nexacro.DSLoadEventInfo)
+//  {
+//  	var nH = this.Grid00.getRealRowFullSize();
+//      //computed style (border-top + border-bottom = 3)
+//      this.Grid00.set_height(nH + 3);
+//  };
+
+this.버튼1_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	alert("test")
+};
+]]></Script>
+  </Form>
+</FDL>

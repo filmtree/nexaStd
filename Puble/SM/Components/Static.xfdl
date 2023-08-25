@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Static" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280" type="default">
+        <Static id="Static00" taborder="0" text="&lt;l v='http://www.naver.com'&gt;동해물&lt;/l&gt;과 &lt;fc v=&quot;red&quot;&gt;&lt;fs v=&quot;20px&quot;&gt;&lt;b v=&quot;true&quot;&gt;&lt;u v=&quot;true&quot;&gt;백두산&lt;/u&gt;&lt;/b&gt;&lt;/fs&gt;&lt;/fc&gt;이 마르고 닳도록 " left="70" top="63" width="396" height="39" usedecorate="true"/>
+        <Static id="Static01" taborder="1" text="&lt;fs v='12'&gt;Text&lt;/fs&gt;&#10;&#13;&#10;&lt;fc v='red'&gt;Text&lt;/fc&gt;&#10;&#13;&#10;&lt;ff v='Dotum'&gt;Text&lt;/ff&gt;&#13;&#10;&#10;&lt;b v='true'&gt;Text&lt;/b&gt;&#13;&#10;&#10;&lt;i v='true'&gt;Text&lt;/i&gt;&#13;&#10;&#10;&lt;u v='true'&gt;Text&lt;/u&gt;&#10;&#13;&#10;&lt;s v='true'&gt;Text&lt;/s&gt;&#13;&#10;&#13;&#10;&lt;l v='http://www.tobesoft.co.kr'&gt;Text&lt;/l&gt;&#13;&#10;&lt;l v='tel:010-1234-5678'&gt; 전화걸기 &lt;/l&gt;&#13;&#10;&lt;l v='mailto:manager@tobesoft.co.kr'&gt; 메일보내기 &lt;/l&gt;" left="70" top="153" width="370" height="235" onclick="Static01_onclick"/>
+        <Static id="Static02" taborder="2" text="동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 동해물과 백두산이 마르고 닳도록 " left="505" top="74" width="292" height="338" wordWrap="char"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Static01_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	
+};
+]]></Script>
+  </Form>
+</FDL>

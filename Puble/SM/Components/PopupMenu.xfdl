@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="PopupMenu" width="1280" height="720" titletext="New Form" onrbuttondown="Form_onrbuttondown">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <PopupMenu id="PopupMenu00" left="410" top="80" width="120" height="130" captioncolumn="captioncolumn" levelcolumn="levelcolumn" innerdataset="innerdataset" checkboxcolumn="checkboxcolumn" enablecolumn="enablecolumn" hotkeycolumn="hotkeycolumn" iconcolumn="iconcolumn" idcolumn="idcolumn" userdatacolumn="userdatacolumn">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="captioncolumn" size="256"/>
+              <Column id="checkboxcolumn" size="256"/>
+              <Column id="enablecolumn" size="256"/>
+              <Column id="hotkeycolumn" size="256"/>
+              <Column id="iconcolumn" size="256"/>
+              <Column id="idcolumn" size="256"/>
+              <Column id="levelcolumn" size="256"/>
+              <Column id="userdatacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="captioncolumn">A</Col>
+                <Col id="levelcolumn">0</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </PopupMenu>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.Form_onrbuttondown = function(obj:nexacro.Form,e:nexacro.MouseEventInfo)
+{
+    this.PopupMenu00.trackPopupByComponent(this, e.clientx, e.clienty);
+};]]></Script>
+    <Objects/>
+    <Bind>
+      <BindItem id="item0" compid="PopupMenu00" propid="accessibilityaction" datasetid="Dataset00" columnid="Company"/>
+    </Bind>
+  </Form>
+</FDL>

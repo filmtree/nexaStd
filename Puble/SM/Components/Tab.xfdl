@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Tab" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Tab id="Tab00" taborder="0" tabindex="0" left="620" top="73" width="453" height="427" tabjustify="true" selectedtabbuttonheight="40" tabbuttonheight="30">
+          <Tabpages>
+            <Tabpage id="Tabpage1" text="tabstudy"/>
+            <Tabpage id="Tabpage2" text="하나둘셋넷긴이름" url="Puble::SM/Components/Calendar.xfdl"/>
+          </Tabpages>
+        </Tab>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>

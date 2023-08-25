@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Checkbox" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <CheckBox id="CheckBox00" taborder="0" text="CheckBox00" left="238" top="113" width="150" height="20" falsevalue="No" truevalue="Yes"/>
+        <Edit id="Edit00" taborder="1" left="238" top="143" width="140" height="20"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00">
+        <ColumnInfo>
+          <Column id="Status" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Status">Yes</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="CheckBox00" propid="value" datasetid="Dataset00" columnid="Status"/>
+      <BindItem id="item1" compid="Edit00" propid="value" datasetid="Dataset00" columnid="Status"/>
+    </Bind>
+  </Form>
+</FDL>

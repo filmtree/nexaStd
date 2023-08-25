@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="ACC" width="1280" height="720" titletext="Page">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <Static id="Static00" taborder="0" text="이름" left="20" top="50" width="67" height="30"/>
+        <Edit id="Edit00" taborder="1" left="160" top="57" width="140" height="30" accessibilitylabel="[@Static00]"/>
+        <Button id="Button00" taborder="2" text="Button00" left="40" top="105" width="120" height="50" enable="true"/>
+        <Menu id="Menu00" taborder="3" left="82" top="226" width="418" height="58" innerdataset="Dataset01" captioncolumn="label" levelcolumn="level" idcolumn="label"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00"/>
+      <Dataset id="Dataset01">
+        <ColumnInfo>
+          <Column id="label" type="STRING" size="256"/>
+          <Column id="level" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="label">A</Col>
+            <Col id="level">0</Col>
+          </Row>
+          <Row>
+            <Col id="label">a-1</Col>
+            <Col id="level">1</Col>
+          </Row>
+          <Row>
+            <Col id="label">a-2</Col>
+            <Col id="level">1</Col>
+          </Row>
+          <Row>
+            <Col id="label">B</Col>
+            <Col id="level">0</Col>
+          </Row>
+          <Row>
+            <Col id="label">D</Col>
+            <Col id="level">0</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Div" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <Div id="Div00" taborder="0" text="Div00" left="256" top="63" width="548" height="327" border="1px solid #dadada">
+          <Layouts>
+            <Layout>
+              <Button id="Button00" taborder="0" text="Button00" left="188" top="116" width="271" height="86"/>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>

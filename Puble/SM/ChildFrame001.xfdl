@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="ChildFrame001" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Button id="btnPopup" taborder="0" text="ChildFrame Popup" left="70" top="125" width="190" height="50" onclick="btnPopup_onclick"/>
+        <Button id="open" taborder="1" text="Open" left="70" top="35" width="120" height="50" onclick="open_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.btnPopup_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo) 
+{
+	var objChildFrame = new ChildFrame();  
+	objChildFrame.init("childframe00", 0, 0, 300, 300, null, null, "Puble::SM/subForm/leftForm.xfdl");
+    objChildFrame.set_border("1px solid #999999");
+	objChildFrame.set_showtitlebar(false)
+    objChildFrame.set_showstatusbar(false);
+    objChildFrame.set_openalign('center middle');
+    objChildFrame.set_resizable(true);
+	objChildFrame.set_background("#ffffff");
+    objChildFrame.set_titletext(objChildFrame.width+"*"+objChildFrame.height);
+    objChildFrame.addEventHandler( "onsize", this.ChildFrame00_onsize, this);
+	objChildFrame.showModal(this.getOwnerFrame(), {minsize:'150', maxsize:'400'});
+};
+
+
+// 사용자가 팝업창 크기를 변경할 때마다 onsize 이벤트가 발생하며 
+// 현재 팝업창의 크기와 변경하려는 크기를 비교해서 범위를 벗어나는 경우 
+// 최소 또는 최대 크기값으로 변경합니다.
+
+this.ChildFrame00_onsize = function(obj:nexacro.ChildFrame, e:nexacro.SizeEventInfo)
+{
+    obj.set_titletext(obj.width+"*"+obj.height);    
+    if(e.cx < obj.minsize) {
+        obj.set_width(obj.minsize);
+    }
+    if(e.cx > obj.maxsize) {
+        obj.set_width(obj.maxsize);
+    }
+    
+    if(e.cy < obj.minsize){
+        obj.set_height(obj.minsize);
+    }
+    if(e.cy > obj.maxsize){
+        obj.set_height(obj.maxsize);
+    }    
+}
+
+
+this.open_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	nexacro.open("POPUP FRAME", "Puble::SM/subForm/leftForm.xfdl", 
+        nexacro.getApplication().getActiveFrame(), 
+        {name:"POPUP FRAME RENAME", uname:"TEST"});
+};
+]]></Script>
+  </Form>
+</FDL>

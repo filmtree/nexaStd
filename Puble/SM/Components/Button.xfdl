@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Button" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Button id="btn_ok" taborder="0" text="OK" left="30" top="50" width="120" height="50" icon="url('theme://images/btn_WF_Calendar.png')" textPadding="0px 0px 0px 10px" onclick="btn_ok_onclick"/>
+        <Static id="Static00" taborder="1" text="Icon Button" left="30" top="24" width="120" height="12"/>
+        <Button id="like" taborder="2" text="Like" left="43" top="222" width="50" height="50" onclick="like_onclick"/>
+        <Button id="angry" taborder="3" text="angry" left="195" top="222" width="50" height="50" onclick="angry_onclick"/>
+        <ImageViewer id="ImageViewerMain" taborder="4" text="" left="119" top="222" width="50" height="50" onclick="ImageViewer00_onclick" image="url('imagerc::haha.png')" stretch="fit"/>
+        <Button id="btn_ok00" taborder="5" text="OK" left="170" top="50" width="120" height="70" icon="url('theme://images/btn_WF_Calendar.png')" textPadding="10px 0px 0px" onclick="btn_ok_onclick" iconPosition="top"/>
+        <Button id="defaultButton" taborder="6" text="defaultButton" left="655" top="52" width="170" height="47" defaultbutton="true" onclick="defaultButton_onclick" escapebutton="true" hotkey="CTRL+H"/>
+        <Button id="escape" taborder="7" text="escapeButton" left="655" top="114" width="170" height="48" onclick="escape_onclick" defaultbutton="true" escapebutton="true"/>
+        <Edit id="defaultEdit" taborder="8" left="412" top="52" width="230" height="48"/>
+        <Edit id="escapeEdit" taborder="9" left="410" top="114" width="230" height="48"/>
+        <Button id="Tg1" taborder="10" text="Toggle1" left="392" top="278" width="120" height="50" onclick="Tg1_onclick" textPadding="0px 0px 0px 10px" cssclass="tg"/>
+        <Button id="Tg2" taborder="11" text="Toggle2" left="390" top="355" width="120" height="50" onclick="Tg2_onclick" textPadding="0px 0px 0px 10px" cssclass="tg2"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.btn_ok_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var strMsg = "[" + e.eventid + " event] " + this.btn_ok.text + " button clicked.";
+	alert(strMsg);
+};
+
+
+this.like_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ImageViewerMain.set_image("imagerc::haha.png")
+};
+
+this.angry_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ImageViewerMain.set_image("imagerc::angry.png")
+};
+
+this.defaultButton_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.defaultEdit.set_value("ENTER KEY")
+
+};
+
+this.escape_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.escapeEdit.set_value("ESC KEY")
+};
+
+this.Tg1_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	obj.setSelectStatus(!obj.getSelectStatus())	
+};
+
+this.Tg2_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	obj.toggleSelectStatus()
+};
+]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Progress" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" width="1280">
+        <ProgressBar id="ProgressBar00" taborder="0" max="100" min="0" text="ProgressBar00" left="54" top="47" width="492" height="67" pos="50" smooth="true"/>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>

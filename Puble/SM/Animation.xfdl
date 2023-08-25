@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Animation" width="1280" height="720" titletext="New Form" onload="Animation_onload">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Edit id="Edit00" taborder="0" left="130" top="116" width="140" height="44"/>
+        <Button id="Button00" taborder="1" text="Play" left="300" top="116" width="120" height="44" onclick="Button00_onclick"/>
+        <Button id="Button01" taborder="2" text="init" left="430" top="116" width="120" height="44" onclick="Button00_00_onclick"/>
+        <Static id="Static00" taborder="3" text="0" left="135" top="183" width="155" height="97" font="bold 28px/normal &quot;Malgun Gothic&quot;" textAlign="center"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Animation_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	var aniObj = new nexacro.Animation("Ani00", this);
+    this.addChild("Ani00", aniObj);
+    
+    this.Ani00.set_easing("linear");
+    this.Ani00.set_duration("5000");
+    
+    this.Ani00.addTarget("AniItem00", this.Static00, "text:100");
+    this.Ani00.setEventHandler("onrun", this.Ani00_onrun, this);
+};
+
+this.Ani00_onrun = function(obj,e)
+{
+    this.Static00.set_text(nexacro.round(this.Static00.text));
+};
+
+
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	if(this.Edit00.value > 0)
+    {
+        this.Ani00.items.AniItem00.props = "text:"+this.Edit00.value;
+    }
+    this.Ani00.play();
+};
+
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Static00.set_text(0);
+};
+]]></Script>
+  </Form>
+</FDL>

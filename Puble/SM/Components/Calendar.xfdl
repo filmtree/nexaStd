@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Calendar" width="1280" height="720" titletext="New Form" scrolltype="none">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Calendar id="Calendar00" taborder="0" left="30" top="20" width="150" height="34" dateformat="yyyy/MM/dd ddd" editformat="yyyy/MM/dd" locale="ko_KR" rtl="false"/>
+        <Calendar id="Calendar01" taborder="1" left="212" top="20" width="180" height="210" type="monthonly" usetrailingday="true"/>
+        <Calendar id="Calendar02" taborder="2" left="424" top="20" width="150" height="34" type="spin"/>
+        <Calendar id="Calendar01_00" taborder="3" left="210" top="250" width="180" height="210" type="monthonly" usetrailingday="false"/>
+        <Calendar id="Calendar03" taborder="4" left="30" top="130" width="150" height="30" weekformat="SUN MON TUE WED THU FRI SAT"/>
+        <Static id="Static00" taborder="5" text="요일변경" left="30" top="100" width="120" height="30"/>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>
