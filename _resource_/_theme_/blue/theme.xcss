@@ -2033,10 +2033,6 @@
 .ListView .body .expandbar[userstatus=expand]
 {
 	-nexa-icon : URL('theme://images/btn_expand.png');
-}.Form[userstatus=contents]
-{
-	background : transparent;
-}
-]]></CSSData>
+}]]></CSSData>
   <Predefines/>
 </XCSS>

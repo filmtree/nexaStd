@@ -31,6 +31,13 @@
             </Layout>
           </Layouts>
         </Div>
+        <Div id="Div00_00" taborder="8" text="Div00" left="450" top="364" width="548" height="220" border="1px solid #dadada" background="#333333">
+          <Layouts>
+            <Layout>
+              <Button id="Button00" taborder="0" text="Button00" left="212" top="72" width="271" height="86"/>
+            </Layout>
+          </Layouts>
+        </Div>
       </Layout>
     </Layouts>
     <Script type="xscript5.1"><![CDATA[
