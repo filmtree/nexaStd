@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<XCSS version="1.1">
-  <CSSData><![CDATA[/* 
+<XCSS version="1.0"><![CDATA[/* 
   nexacro Application Theme
   Name		   : blue.xtheme
   Published        : 2020-04-06
   Last-modified    : 2022-03-24
 */
 
-/* Frame/Form */.Form
+/* Frame/Form */
+.Form
 {
 	font : 12px "Malgun Gothic";
 	color : #555555;
-	background : #FFFFFF;
+	background : #ffffff;
 	-nexa-border : 0px none;
 }
 
@@ -1070,7 +1070,7 @@
 .Radio .radioitem
 {
 	-nexa-icon : URL('theme://images/rdo_WF_Radio.png');
-	-nexa-text-padding : 0px 0px 0px 10px;
+	-nexa-text-padding : 0px 0px 0px 5px;
 }
 
 .Radio .radioitem[userstatus=selected]
@@ -2033,6 +2033,4 @@
 .ListView .body .expandbar[userstatus=expand]
 {
 	-nexa-icon : URL('theme://images/btn_expand.png');
-}]]></CSSData>
-  <Predefines/>
-</XCSS>
+}]]></XCSS>
