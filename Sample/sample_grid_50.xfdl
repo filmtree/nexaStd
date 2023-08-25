@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<FDL version="2.0">
+<FDL version="2.1">
   <Form id="sample_grid_50" width="1280" height="720" titletext="New Form" locale="en_US">
     <Layouts>
       <Layout height="720" width="1280">
@@ -19,7 +19,7 @@
                 <Cell col="1" text="Original Data"/>
               </Band>
               <Band id="body">
-                <Cell displaytype="checkboxcontrol" suppressalign="middle" edittype="checkbox" expr="expr:Column0=='Y'?'1':'0'" text="bind:Column0"/>
+                <Cell displaytype="checkboxcontrol" edittype="checkbox" expr="expr:Column0=='Y'?'1':'0'" text="bind:Column0"/>
                 <Cell col="1" text="bind:Column0"/>
               </Band>
             </Format>
