@@ -3,11 +3,39 @@
   <Form id="Checkbox" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
-        <CheckBox id="CheckBox00" taborder="0" text="CheckBox00" left="29" top="40" width="150" height="20"/>
-        <CheckBox id="CheckBox00_00" taborder="1" text="CheckBox00" left="179" top="40" width="150" height="20"/>
-        <CheckBox id="CheckBox00_01" taborder="2" text="CheckBox00" left="329" top="40" width="150" height="20"/>
-        <CheckBox id="CheckBox00_02" taborder="3" text="CheckBox00" left="479" top="40" width="150" height="20"/>
+        <CheckBox id="CheckBox00" taborder="0" text="CheckBox00" left="35" top="30" width="150" height="20" onchanged="CheckBox00_onchanged" value="true"/>
+        <Button id="visBtn" taborder="1" text="Button00" left="35" top="64" width="201" height="47"/>
+        <CheckBox id="CheckBox00_00" taborder="2" text="CheckBox00" left="300" top="37" width="150" height="20" falsevalue="No" truevalue="Yes"/>
+        <Edit id="Edit00" taborder="3" left="300" top="67" width="140" height="20"/>
+        <CheckBox id="CheckBox01" taborder="4" text="Yes" left="525" top="47" width="150" height="20" value="true" onchanged="CheckBox01_onchanged" falsevalue="No" truevalue="Yes"/>
       </Layout>
     </Layouts>
+    <Script type="xscript5.1"><![CDATA[this.CheckBox00_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
+{
+	var bCheck = obj.value;
+	this.visBtn.set_visible(bCheck)
+};
+
+this.CheckBox01_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
+{
+	obj.isChecked() ? obj.set_text(obj.truevalue) : obj.set_text(obj.falsevalue)
+};
+]]></Script>
+    <Bind>
+      <BindItem id="item0" compid="CheckBox00_00" propid="value" datasetid="Dataset00" columnid="Status"/>
+      <BindItem id="item1" compid="Edit00" propid="value" datasetid="Dataset00" columnid="Status"/>
+    </Bind>
+    <Objects>
+      <Dataset id="Dataset00">
+        <ColumnInfo>
+          <Column id="Status" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Status">Yes</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
   </Form>
 </FDL>

@@ -13,8 +13,10 @@
         <Button id="escape" taborder="7" text="escapeButton" left="655" top="114" width="170" height="48" onclick="escape_onclick" defaultbutton="true" escapebutton="true"/>
         <Edit id="defaultEdit" taborder="8" left="412" top="52" width="230" height="48"/>
         <Edit id="escapeEdit" taborder="9" left="410" top="114" width="230" height="48"/>
-        <Button id="Tg1" taborder="10" text="Toggle1" left="392" top="278" width="120" height="50" onclick="Tg1_onclick" textPadding="0px 0px 0px 10px" cssclass="tg"/>
-        <Button id="Tg2" taborder="11" text="Toggle2" left="390" top="355" width="120" height="50" onclick="Tg2_onclick" textPadding="0px 0px 0px 10px" cssclass="tg2"/>
+        <Button id="Tg1" taborder="10" text="Toggle1" left="409" top="205" width="120" height="50" onclick="Tg1_onclick" textPadding="0px 0px 0px 10px" cssclass="tg"/>
+        <Button id="Tg2" taborder="11" text="Toggle2" left="407" top="282" width="120" height="50" onclick="Tg2_onclick" textPadding="0px 0px 0px 10px" cssclass="tg2"/>
+        <Button id="Button00" taborder="12" text="Button00" left="696" top="251" width="188" height="47" onclick="Button00_onclick"/>
+        <Grid id="Grid00" taborder="13" left="696" top="321" width="188" height="159"/>
       </Layout>
     </Layouts>
     <Script type="xscript5.1"><![CDATA[
@@ -54,6 +56,11 @@ this.Tg1_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 this.Tg2_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
 {
 	obj.toggleSelectStatus()
+};
+
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{	
+	this.Grid00.visible == true ? this.Grid00.set_visible(false) :	this.Grid00.set_visible(true);
 };
 ]]></Script>
   </Form>

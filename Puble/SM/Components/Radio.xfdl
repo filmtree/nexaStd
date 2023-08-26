@@ -3,7 +3,7 @@
   <Form id="Radio" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" width="1280">
-        <Radio id="Radio00" taborder="0" left="840" top="294" width="300" height="93" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" columncount="-1" rowcount="-1" direction="vertical">
+        <Radio id="Radio00" taborder="0" left="30" top="27" width="300" height="93" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" columncount="-1" rowcount="-1" direction="vertical" index="0" text="test1" value="0">
           <Dataset id="innerdataset">
             <ColumnInfo>
               <Column id="codecolumn" size="256"/>

@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <FDL version="2.1">
-  <Form id="Edit" width="1280" height="720" titletext="New Form">
+  <Form id="Edit" width="1280" height="720" titletext="타이틀">
     <Layouts>
-      <Layout height="720" width="1280">
-        <Edit id="Edit00" taborder="0" left="30" top="34" width="458" height="66" displaynulltext="값을 입력하세요"/>
+      <Layout height="720" width="1280" type="default" spacing="10px" verticalgap="10" flexmainaxisalign="start">
+        <Edit id="Edit00" taborder="0" left="170" top="34" width="260" height="46" displaynulltext="값을 입력하세요"/>
+        <Edit id="Edit01" taborder="1" left="170" top="120" width="260" height="50" imeaction="done" autoselect="false" visible="true" text="xptmxm" imemode="none" inputfilter="none" inputtype="normal"/>
       </Layout>
     </Layouts>
   </Form>
