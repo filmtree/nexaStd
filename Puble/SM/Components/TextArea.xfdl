@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <FDL version="2.1">
-  <Form id="TextArea" width="1280" height="720" titletext="New Form">
+  <Form id="TextArea" width="1280" height="720" titletext="New Form" statustext="텍스트">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
         <Div id="Div00" taborder="0" text="Div00" left="49" top="73" width="374" height="189" border="1px solid #cccccc" background="#FFFFFF">
@@ -11,6 +11,7 @@
           </Layouts>
         </Div>
         <Static id="Static00" taborder="1" text="늘어나는 Textarea" left="49" top="40" width="120" height="14"/>
+        <TextArea id="TextArea00" taborder="2" left="484" top="73" width="366" height="189" displaynulltext="입력하세요"/>
       </Layout>
     </Layouts>
     <Script type="xscript5.1"><![CDATA[

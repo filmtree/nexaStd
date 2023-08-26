@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<XCSS version="1.0"><![CDATA[/* 
+<XCSS version="1.1">
+  <CSSData><![CDATA[/* 
   nexacro Application Theme
   Name		   : blue.xtheme
   Published        : 2020-04-06
@@ -2033,4 +2034,6 @@
 .ListView .body .expandbar[userstatus=expand]
 {
 	-nexa-icon : URL('theme://images/btn_expand.png');
-}]]></XCSS>
+}]]></CSSData>
+  <Predefines/>
+</XCSS>

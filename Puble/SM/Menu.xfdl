@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Menu" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Menu id="Menu00" taborder="0" left="38" top="41" width="704" height="39" innerdataset="Dataset00" captioncolumn="menu" levelcolumn="level" idcolumn="id" popuptype="normal"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00">
+        <ColumnInfo>
+          <Column id="id" type="STRING" size="256"/>
+          <Column id="menu" type="STRING" size="256"/>
+          <Column id="level" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="menu">menu1</Col>
+            <Col id="id">1</Col>
+            <Col id="level">0</Col>
+          </Row>
+          <Row>
+            <Col id="menu">menu1-1</Col>
+            <Col id="id">2</Col>
+            <Col id="level">1</Col>
+          </Row>
+          <Row>
+            <Col id="menu">menu1-2</Col>
+            <Col id="id">3</Col>
+            <Col id="level">1</Col>
+          </Row>
+          <Row>
+            <Col id="menu">menu2</Col>
+            <Col id="id">4</Col>
+            <Col id="level">0</Col>
+          </Row>
+          <Row>
+            <Col id="menu">menu3</Col>
+            <Col id="id">5</Col>
+            <Col id="level">0</Col>
+          </Row>
+          <Row>
+            <Col id="menu">menu4</Col>
+            <Col id="id">6</Col>
+            <Col id="level">0</Col>
+          </Row>
+          <Row>
+            <Col id="menu">menu5</Col>
+            <Col id="id">7</Col>
+            <Col id="level">0</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>
