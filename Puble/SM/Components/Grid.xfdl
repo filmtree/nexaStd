@@ -173,6 +173,21 @@
             </Format>
           </Formats>
         </Grid>
+        <Grid id="Grid01_00" taborder="11" left="540" top="656" width="187" height="224" binddataset="Dataset02" extendsizetype="row" treeinitstatus="expand,all" treeusecheckbox="false" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24"/>
+              </Rows>
+              <Band id="body">
+                <Cell text="bind:Column1" displaytype="treeitemcontrol" edittype="tree" treelevel="bind:Column0"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
       </Layout>
     </Layouts>
     <Objects>
@@ -317,6 +332,46 @@
             <Col id="Column0">0</Col>
             <Col id="Column1">D</Col>
             <Col id="Column2">4</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset02">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">0</Col>
+            <Col id="Column1">A</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">A-1</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+            <Col id="Column1">A-1-1</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+            <Col id="Column1">A-1-2</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">A-2</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+            <Col id="Column1">A-2-1</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">0</Col>
+            <Col id="Column1">B</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">B-1</Col>
           </Row>
         </Rows>
       </Dataset>
