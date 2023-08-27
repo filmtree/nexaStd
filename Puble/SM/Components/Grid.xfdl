@@ -14,7 +14,7 @@
                 <Column size="80"/>
               </Columns>
               <Rows>
-                <Row band="head" size="24"/>
+                <Row size="24" band="head"/>
                 <Row size="24"/>
               </Rows>
               <Band id="head">
@@ -25,7 +25,7 @@
                 <Cell col="4" text="Salary"/>
               </Band>
               <Band id="body">
-                <Cell text="bind:Name"/>
+                <Cell text="bind:Name" displaytype="text"/>
                 <Cell col="1" text="bind:Address"/>
                 <Cell col="2" text="bind:Company"/>
                 <Cell col="3" text="bind:Department"/>
@@ -34,7 +34,7 @@
             </Format>
           </Formats>
         </Grid>
-        <Grid id="Grid00_00" taborder="1" left="541" top="50" width="459" height="141" binddataset="Dataset00" autofittype="col" formatid="default" fillareatype="none" useselcolor="true" cellmovingtype="none" cellsizingtype="none" extendsizetype="none" fastvscrolltype="centerdisplay" maxheight="200" minheight="">
+        <Grid id="Grid00_00" taborder="1" left="540" top="55" width="459" height="141" binddataset="Dataset00" autofittype="col" formatid="default" fillareatype="none" useselcolor="true" cellmovingtype="none" cellsizingtype="none" extendsizetype="none" fastvscrolltype="centerdisplay" maxheight="200" minheight="">
           <Formats>
             <Format id="default">
               <Columns>
@@ -65,8 +65,8 @@
             </Format>
           </Formats>
         </Grid>
-        <Grid id="Grid01" taborder="4" left="541" top="240" width="469" height="179" nodatatext="데이터가 없습니다."/>
-        <Grid id="Grid02" taborder="5" left="541" top="476" width="169" height="143" binddataset="Checkbox" autofittype="col" cellclickbound="cell">
+        <Grid id="Grid01" taborder="4" left="541" top="240" width="459" height="179" nodatatext="데이터가 없습니다."/>
+        <Grid id="Grid02" taborder="5" left="541" top="476" width="169" height="143" binddataset="Checkbox" autofittype="col" cellclickbound="cell" showcellselection="true">
           <Formats>
             <Format id="default">
               <Columns>
@@ -148,7 +148,7 @@
         </Grid>
         <Static id="Static02" taborder="8" text="Cell Link" left="41" top="605" width="103" height="28"/>
         <Static id="Static02_00" taborder="9" text="Checkbox Text and CellClickBound" left="541" top="443" width="188" height="28" onclick="Static02_00_onclick"/>
-        <Grid id="Grid05" taborder="10" left="760" top="476" width="250" height="137" binddataset="Dataset01" autofittype="col" oncellclick="Grid05_oncellclick">
+        <Grid id="Grid05" taborder="10" left="765" top="656" width="250" height="137" binddataset="Dataset01" autofittype="col" oncellclick="Grid05_oncellclick">
           <Formats>
             <Format id="default">
               <Columns>
@@ -173,7 +173,7 @@
             </Format>
           </Formats>
         </Grid>
-        <Grid id="Grid01_00" taborder="11" left="540" top="656" width="187" height="224" binddataset="Dataset02" extendsizetype="row" treeinitstatus="expand,all" treeusecheckbox="false" autofittype="col">
+        <Grid id="Grid01_00" taborder="11" left="540" top="656" width="170" height="224" binddataset="Dataset02" extendsizetype="row" treeinitstatus="expand,all" treeusecheckbox="false" autofittype="col">
           <Formats>
             <Format id="default">
               <Columns>
@@ -188,6 +188,47 @@
             </Format>
           </Formats>
         </Grid>
+        <Grid id="Grid06" taborder="12" left="760" top="476" width="380" height="140" binddataset="ds_Radio" cellclickbound="cell" autofittype="col" autosizingtype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="94"/>
+                <Column size="48"/>
+                <Column size="48"/>
+                <Column size="44"/>
+                <Column size="50"/>
+                <Column size="48"/>
+                <Column size="48"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell rowspan="2" text="Restaurant"/>
+                <Cell col="1" colspan="3" text="Service"/>
+                <Cell col="4" colspan="3" text="Value"/>
+                <Cell row="1" col="1" text="1"/>
+                <Cell row="1" col="2" text="2"/>
+                <Cell row="1" col="3" text="3"/>
+                <Cell row="1" col="4" text="1"/>
+                <Cell row="1" col="5" text="2"/>
+                <Cell row="1" col="6" text="3"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Restaurant"/>
+                <Cell col="1" displaytype="radioitemcontrol" edittype="radioitem" text="bind:Service" radioitemcodevalue="1"/>
+                <Cell col="2" displaytype="radioitemcontrol" edittype="radioitem" text="bind:Service" radioitemcodevalue="2"/>
+                <Cell col="3" text="bind:Service" displaytype="radioitemcontrol" edittype="radioitem" radioitemcodevalue="3"/>
+                <Cell col="4" text="bind:Value" displaytype="radioitemcontrol" edittype="radioitem" radioitemcodevalue="1"/>
+                <Cell col="5" displaytype="radioitemcontrol" edittype="radioitem" text="bind:Value" radioitemcodevalue="2"/>
+                <Cell col="6" displaytype="radioitemcontrol" edittype="radioitem" text="bind:Value" radioitemcodevalue="3"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static02_00_00" taborder="13" text="Radio Button" left="760" top="442" width="188" height="28" onclick="Static02_00_onclick"/>
       </Layout>
     </Layouts>
     <Objects>
@@ -372,6 +413,30 @@
           <Row>
             <Col id="Column0">1</Col>
             <Col id="Column1">B-1</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_Radio">
+        <ColumnInfo>
+          <Column id="Restaurant" type="STRING" size="256"/>
+          <Column id="Service" type="STRING" size="256"/>
+          <Column id="Value" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Restaurant">Burgerking</Col>
+            <Col id="Service">2</Col>
+            <Col id="Value">3</Col>
+          </Row>
+          <Row>
+            <Col id="Restaurant">McDonald's</Col>
+            <Col id="Value">2</Col>
+            <Col id="Service">1</Col>
+          </Row>
+          <Row>
+            <Col id="Restaurant">SHAKE SHACK</Col>
+            <Col id="Value">2</Col>
+            <Col id="Service">2</Col>
           </Row>
         </Rows>
       </Dataset>
