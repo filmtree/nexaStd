@@ -3,7 +3,7 @@
   <Form id="Grid_Disp" width="1280" height="720" titletext="New Form" background="">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
-        <Grid id="Grid00" taborder="0" left="5" top="5" width="1115" height="205" binddataset="Dataset00" autofittype="col" cellclickbound="cell">
+        <Grid id="Grid00" taborder="0" left="5" top="5" width="1115" height="255" binddataset="Dataset00" autofittype="col" cellclickbound="cell">
           <Formats>
             <Format id="default">
               <Columns>
@@ -69,6 +69,68 @@
             </Format>
           </Formats>
         </Grid>
+        <Grid id="Grid01" taborder="1" left="50" top="346" width="450" height="268" binddataset="ds_GridLong" onmousemove="Grid01_onmousemove" onmouseenter="Grid01_onmousemove">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="122"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Name"/>
+                <Cell col="1" text="Address"/>
+                <Cell col="2" text="Company"/>
+                <Cell col="3" text="Department"/>
+                <Cell col="4" text="Salary"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Name"/>
+                <Cell col="1" text="bind:Address"/>
+                <Cell col="2" text="bind:Company"/>
+                <Cell col="3" text="bind:Department"/>
+                <Cell col="4" text="bind:Salary"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid02" taborder="2" left="580" top="346" width="460" height="268" binddataset="ds_GridLong" onmousemove="Grid01_onmousemove" autosizingtype="row" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="122"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Name"/>
+                <Cell col="1" text="Address"/>
+                <Cell col="2" text="Company"/>
+                <Cell col="3" text="Department"/>
+                <Cell col="4" text="Salary"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Name"/>
+                <Cell col="1" text="bind:Address" tooltiptext="bind:Address"/>
+                <Cell col="2" text="bind:Company"/>
+                <Cell col="3" text="bind:Department" wordWrap="char"/>
+                <Cell col="4" text="bind:Salary"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
       </Layout>
     </Layouts>
     <Objects>
@@ -96,7 +158,7 @@
         <Rows>
           <Row>
             <Col id="Column1">ButtonText</Col>
-            <Col id="Column0"></Col>
+            <Col id="Column0"/>
             <Col id="Column2">2023-05-30</Col>
             <Col id="Column3">1</Col>
             <Col id="Column4">1</Col>
@@ -148,6 +210,89 @@
           </Row>
         </Rows>
       </Dataset>
+      <Dataset id="ds_GridLong">
+        <ColumnInfo>
+          <Column id="Name" type="STRING" size="256"/>
+          <Column id="Address" type="STRING" size="256"/>
+          <Column id="Company" type="STRING" size="256"/>
+          <Column id="Department" type="STRING" size="256"/>
+          <Column id="Salary" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Name">John</Col>
+            <Col id="Address">Seoul, KOREA</Col>
+            <Col id="Company">1dollar</Col>
+            <Col id="Department">Sales</Col>
+            <Col id="Salary">15000</Col>
+          </Row>
+          <Row>
+            <Col id="Name">James</Col>
+            <Col id="Address">Barcelona, Spain</Col>
+            <Col id="Company">EBOT</Col>
+            <Col id="Department">Consulting</Col>
+            <Col id="Salary">25000</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Donald</Col>
+            <Col id="Address">Califonia, USA</Col>
+            <Col id="Company">EBOT</Col>
+            <Col id="Department">Research Institute</Col>
+            <Col id="Salary">1000000</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Lisa</Col>
+            <Col id="Address">London, United Kingdom</Col>
+            <Col id="Company">1dollar</Col>
+            <Col id="Department">Quality Assurance</Col>
+            <Col id="Salary">3000</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Joe</Col>
+            <Col id="Address">São Paulo, Brazil</Col>
+            <Col id="Company">hangul</Col>
+            <Col id="Department">R&amp;D</Col>
+            <Col id="Salary">8600</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Michael</Col>
+            <Col id="Address">Mumbai, India</Col>
+            <Col id="Company">1dollar</Col>
+            <Col id="Department">Personnel</Col>
+            <Col id="Salary">1300</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Lilli</Col>
+            <Col id="Address">Ankara, Turkey</Col>
+            <Col id="Company">hangul</Col>
+            <Col id="Department">Quality Assurance</Col>
+            <Col id="Salary">4400</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Colt</Col>
+            <Col id="Address">Sydney, NSW, Australia </Col>
+            <Col id="Company">hangul</Col>
+            <Col id="Department">Sales</Col>
+            <Col id="Salary">62000</Col>
+          </Row>
+        </Rows>
+      </Dataset>
     </Objects>
+    <Script type="xscript5.1"><![CDATA[this.Grid01_onmousemove = function(obj:nexacro.Grid,e:nexacro.GridMouseEventInfo)
+{
+    var nCellSize = obj.getFormatColSize(e.cell);
+    var strText   = obj.getCellText(e.row, e.cell);
+    var nTextLen  = nexacro.getTextSize( strText, obj.font );
+//     
+//     this.TextArea00.set_value("strText: "+strText+"\n");
+//     this.TextArea00.insertText("nCellSize: "+nCellSize+"\n");
+//     this.TextArea00.insertText("nTextLen: "+nTextLen.nx+"\n");
+
+    if( nCellSize < nTextLen.nx){
+        obj.setCellProperty( "Body", e.cell, "tooltiptext", strText);
+    } else {
+        obj.setCellProperty( "Body", e.cell, "tooltiptext", "");
+    }    
+};]]></Script>
   </Form>
 </FDL>
