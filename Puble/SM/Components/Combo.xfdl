@@ -71,7 +71,7 @@
             </Format>
           </Formats>
         </Grid>
-        <Combo id="Combo03" taborder="7" text="사과" left="600" top="114" width="269" height="46" type="dropdown" innerdataset="Dataset00" codecolumn="CODE" datacolumn="DATA" index="0" value="00"/>
+        <Combo id="Combo03" taborder="7" text="사과" left="600" top="114" width="269" height="46" type="dropdown" innerdataset="Dataset00" codecolumn="CODE" datacolumn="DATA" index="0" value="00" initvalueid="iv_initComboA"/>
         <Radio id="Radio00" taborder="8" left="602" top="67" width="417" height="40" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" direction="vertical" index="0" text="DROPDOWN" value="00" onitemchanged="Radio00_onitemchanged">
           <Dataset id="innerdataset">
             <ColumnInfo>

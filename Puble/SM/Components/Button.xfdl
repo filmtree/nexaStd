@@ -15,7 +15,7 @@
         <Edit id="escapeEdit" taborder="9" left="410" top="114" width="230" height="48"/>
         <Button id="Tg1" taborder="10" text="Toggle1" left="409" top="205" width="120" height="50" onclick="Tg1_onclick" textPadding="0px 0px 0px 10px" cssclass="tg"/>
         <Button id="Tg2" taborder="11" text="Toggle2" left="407" top="282" width="120" height="50" onclick="Tg2_onclick" textPadding="0px 0px 0px 10px" cssclass="tg2"/>
-        <Button id="Button00" taborder="12" text="Button00" left="696" top="251" width="188" height="47" onclick="Button00_onclick"/>
+        <Button id="Button00" taborder="12" left="696" top="251" width="188" height="47" onclick="Button00_onclick" initvalueid="initBtnA"/>
         <Grid id="Grid00" taborder="13" left="696" top="321" width="188" height="159"/>
       </Layout>
     </Layouts>

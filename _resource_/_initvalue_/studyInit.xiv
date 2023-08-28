@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GlobalPropInitvalueDefinition version="1.0">
+  <nexacro.Button>
+    <initvalueid id="iv_initBtnA" text="InitBtnA" accessibilityaction="버튼입니다." background="red" accessibilityenable="true" accessibilitylabel="버튼"/>
+  </nexacro.Button>
+  <nexacro.Combo>
+    <initvalueid id="iv_initComboA" accessibilityaction="단축키는...." accessibilitydesclevel="all" accessibilityrole="combobox" accessibilityenable="true" accessibilitylabel=" 과일선택메뉴"/>
+  </nexacro.Combo>
+</GlobalPropInitvalueDefinition>
