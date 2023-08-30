@@ -1,10 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <FDL version="2.1">
-  <Form id="ACC" width="1280" height="720" titletext="Page">
+  <Form id="ACC" width="1280" height="1140" titletext="Page">
     <Layouts>
-      <Layout height="720" width="1280">
-        <Static id="Static00" taborder="0" text="이름" left="40" top="40" width="67" height="30"/>
-        <Edit id="Edit00" taborder="1" left="180" top="40" width="140" height="30" accessibilitylabel="[@Static00]"/>
+      <Layout height="1140" width="1280">
+        <Static id="Static00" taborder="0" text="이름" left="20" top="325" width="67" height="30"/>
+        <Edit id="Edit00" taborder="1" left="110" top="325" width="140" height="30" accessibilitylabel="[@Static00]"/>
+        <Static id="Static01" taborder="2" text="접근성을 위해서는 Edit에 Lable에 해당하는 컴포넌트를   &#13;&#10;accessibilitylabel 을 설정해야 함.  [@Static00]" left="20" top="255" width="415" height="36" font="16px/normal &quot;Malgun Gothic&quot;" onclick="Static01_onclick"/>
+        <ImageViewer id="ImageViewer00" taborder="3" text="ImageViewer00" left="22" top="375" width="649" height="237" image="url('imagerc::acc001.png')"/>
+        <Static id="Static02" taborder="4" text="접근성을 위해서는 Button, Combobox, Edit, MaskEdit, Textarea, Checkbox, RadioItem 등에 initvalueid 설정&#13;&#10;Resource Explorer에서 initValueDefinition에서 접근성 관련 초기값 설정&#13;&#10; &#13;&#10;accessibilityaction : 단축키등 UI에 대한 화면리더기에 설명&#13;&#10;accessibilitydesclevel : 선택시 화면리더기등에서 읽도록 허용&#13;&#10;accessibilitydescription : aria-description&#13;&#10;accessibilityenable: 하위 요소까지 화면리더기에서 읽도록 허용&#13;&#10;accessibilitylabel: aria-label&#13;&#10;accessibilityrole: aria-role&#13;&#10;&#13;&#10;" left="20" top="20" width="868" height="231" font="18px/normal &quot;Malgun Gothic&quot;"/>
+        <Combo id="Combo00" taborder="5" left="22" top="647" width="206" height="33" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" displaynulltext="선택" index="0" value="0" hotkey="CTRL+E" autoselect="true" text="선택" onsetfocus="Combo00_onsetfocus" onkeydown="Combo00_onkeydown" accessibilityaction="Ctrl+방향키로 리스트를 선택할 수 있습니다. Alt+아래방향키로 리스트 박스를 열 수 있습니다.">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">0</Col>
+                <Col id="datacolumn">선택</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">1</Col>
+                <Col id="datacolumn">선택메뉴1</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">2</Col>
+                <Col id="datacolumn">선택메뉴2</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <CheckBox id="CheckBox00" taborder="6" text="CheckBox00" left="22" top="710" width="150" height="20" value="false"/>
       </Layout>
     </Layouts>
     <Objects>
@@ -38,5 +64,11 @@
         </Rows>
       </Dataset>
     </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.Static01_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	
+};
+]]></Script>
   </Form>
 </FDL>
