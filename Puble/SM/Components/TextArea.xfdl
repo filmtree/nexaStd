@@ -11,7 +11,8 @@
           </Layouts>
         </Div>
         <Static id="Static00" taborder="1" text="늘어나는 Textarea" left="49" top="40" width="120" height="14"/>
-        <TextArea id="TextArea00" taborder="2" left="484" top="73" width="366" height="189" displaynulltext="입력하세요"/>
+        <TextArea id="TextArea00" taborder="2" left="484" top="73" width="366" height="189" displaynulltext="입력하세요" scrollbartype="indicator indicator"/>
+        <TextArea id="TextArea00_00" taborder="3" left="484" top="281" width="366" height="189" displaynulltext="입력하세요"/>
       </Layout>
     </Layouts>
     <Script type="xscript5.1"><![CDATA[

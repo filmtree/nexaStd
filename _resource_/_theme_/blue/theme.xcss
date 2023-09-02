@@ -1697,13 +1697,15 @@
 /* ScrollIndicatorControl */
 .VScrollIndicatorControl,.HScrollIndicatorControl
 {
-	background : #f2f2f2;
+	background : red;
+	
 }
 
 .VScrollIndicatorControl .trackbar,.HScrollIndicatorControl .trackbar
 {
-	background : #cccccc;
+	background : blue;
 	-nexa-border : 1px solid transparent;
+	border-radius: 4px;
 }
 
 .VScrollIndicatorControl .trackbar[userstatus=pushed],.HScrollIndicatorControl .trackbar[userstatus=pushed]
